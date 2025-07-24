@@ -22,7 +22,7 @@
       height: 1080px; /* Fixed height matching your design at 67% zoom */
       background-color: black;
       overflow: hidden;
-      position: relative;
+      position: fixed;
       transform-origin: 0 0;
     }
 
@@ -123,9 +123,6 @@
 
     /* For screens smaller than the design */
     @media (max-width: 1920px) {
-      html, body {
-        overflow: auto;
-      }
       .scaler {
         transform: scale(calc(var(--scale-factor)));
       }
