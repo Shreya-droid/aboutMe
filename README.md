@@ -1,2 +1,2 @@
-# shreya--droid.github.io
+# shreya_droid.github.io
 Hi there 👋
