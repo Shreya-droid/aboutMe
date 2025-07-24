@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shreya Sharma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link
+      data-n-head="ssr"
+      rel="icon"
+      type="image/x-icon"
+      href="image/women-who-code.png"
+    />
+  <style>
+    /* Base reset and fixed dimensions */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1920px; /* Fixed width matching your design at 67% zoom */
+      height: 1080px; /* Fixed height matching your design at 67% zoom */
+      background-color: black;
+      overflow: hidden;
+      position: relative;
+      transform-origin: 0 0;
+    }
+
+    /* Scaling container for different screen sizes */
+    .scaler {
+      position: absolute;
+      width: 1920px;
+      height: 1080px;
+      transform-origin: 0 0;
+    }
+
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .bright {
+      opacity: 1;
+    }
+
+    .big {
+      width: 4px !important;
+      height: 4px !important;
+    }
+
+    .image-module {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 14px solid white;
+      border-radius: 999px; /* capsule shape */
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      z-index: 10;
+    }
+
+    .image-module .circle {
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 4px solid white;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .image-module .circle img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .center-box {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1400px;
+      height: 850px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 16px solid #E2B007;
+      background-color: rgba(226, 176, 7, 0.2);
+      border-radius: 60px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+    }
+
+    .vertical-box {
+      width: 350px;
+      height: 90%;
+      background-color: transparent;
+      color: white;
+      padding: 30px;
+      font-size: 19px;
+      overflow-y: auto;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      text-align: justify;
+      align-self: flex-start;
+      margin-left: -400px;
+      margin-top: 90px;
+    }
+
+    @keyframes floatDNA {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* For screens smaller than the design */
+    @media (max-width: 1920px) {
+      html, body {
+        overflow: auto;
+      }
+      .scaler {
+        transform: scale(calc(var(--scale-factor)));
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="scaler">
+<h2 style="
+	  color: #E2B007;
+	  font-size: 42px;
+	  text-align: center;
+	  -webkit-text-stroke: 1px white; /* white outline */
+	  text-stroke: 1px white;
+	  text-shadow: 0 0 2px #E2B007,
+				   0 0 5px #E2B007,
+				   0 0 10px #E2B007,
+				   0 0 20px #E2B007;">
+	  LIVE &nbsp;&nbsp;LONG &nbsp;&nbsp;AND &nbsp;&nbsp;PROSPER ! .&nbsp;.&nbsp;.
+</h2>
+<!-- Module 1 - small -->
+<div class="image-module" style="top: 180px; left: 120px; width: 290px; height: 1100px; flex-direction: column; border: 18px solid #FF4500; background-color: rgba(255, 69, 0, 0.3);">
+  <div class="circle" style="width: 320px; height: 290px; border: 18px solid #FF4500; margin-top: -35px;">
+    <img src="image/women-who-code.png" alt="Image 1">
+  </div>
+  <ul style="list-style: none; padding: 0; margin-top: 40px; margin-left: 30px; display: flex; flex-direction: column; gap: 20px; font-family: 'Ubuntu', sans-serif;"><li>
+	<a href="#" onclick="toggleBox('educationBox')" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+		Education <i class="fas fa-user-graduate" style="font-size: 28px; margin-left: 5px;"></i>
+	</a>
+  </li>
+
+  <li>
+    <a href="#" onclick="toggleBox('experienceBox')" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+      Experience <i class="fas fa-laptop-code" style="font-size: 28px; margin-left: 5px;"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="pdf/ResearchProjects_SharmaShreya.pdf" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+      Projects <i class="fas fa-clone" style="font-size: 28px; margin-left: 5px;"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="#" onclick="toggleBox('publicationBox')" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+      Publications <i class="fas fa-book-open" style="font-size: 28px; margin-left: 5px;"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="#" onclick="toggleBox('achievementBox')" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+      Achievements <i class="fas fa-award" style="font-size: 28px; margin-left: 5px;"></i>
+    </a>
+  </li>
+
+  <li style="margin-top: 10px;">
+    <a href="#" onclick="toggleBox('museBox')" style="text-decoration: none; color: #00BFFF; font-weight: bold; font-size: 28px;">
+      Philosopher's Stone <i class="fas fa-magic" style="font-size: 28px; margin-left: 5px;"></i>
+    </a>
+  </li></ul>
+</div>
+
+<!-- Module 2 - medium -->
+<div class="image-module" style="top: 290px; right: -430px; width: 1000px; height: 200px; border: 18px solid #01796F; background-color: rgba(79, 182, 174, 0.3);">
+  <div class="circle" style="width: 200px; height: 200px; border: 18px solid #01796F; margin-left: -35px;">
+    <img src="image/spock.png" alt="Image 2">
+  </div>
+  <!-- Text Info -->
+  <div style="color: white; font-size: 26px; line-height: 1.5; margin-left: 40px; margin-top: -20px; font-family: 'Ubuntu', sans-serif;">
+    <p><strong style="color: #00BFFF;">Website:</strong><br>
+    <a href="index.html" style="color: white; text-decoration: underline;">Shreya Sharma</a></p>
+	
+  </div>
+</div>
+
+<!-- Module 3 - large -->
+<div class="image-module" style="bottom: 190px; left: 90%; transform: translateX(-50%); width: 1400px; height: 300px; border: 18px solid #00BFFF; background-color: rgba(173, 216, 230, 0.3);">
+  <div class="circle" style="width: 300px; height: 300px; border: 18px solid #00BFFF; margin-left: -35px;">
+    <img src="image/Photograph.jpg" alt="Image 3">
+  </div>
+  <!-- Text Info -->
+  <div style="color: white; font-size: 20px; line-height: 1.5; margin-left: 40px; font-family: 'Ubuntu', sans-serif;">
+    <p><strong>Shreya Sharma, PhD Student</strong><br>
+    Indian Institute of Technology Roorkee (IITR)</p>
+
+    <hr style="border: 1px solid #00BFFF;">
+
+    <p><strong>Contact</strong><br>
+    <a href="mailto:shreyashiisharma@gmail.com" style="color: white; text-decoration: underline;">shreya_s@bt.iitr.ac.in</a></p>
+
+    <p>Genetics and Bioinformatics Lab<br>
+    Department of Biosciences and Bioengineering (BSBE)<br>
+    IIT Roorkee, Uttarakhand, India</p>
+  </div>
+</div>
+
+<script>
+  // Set scale factor based on window size
+  function setScale() {
+    const designWidth = 1920;
+    const designHeight = 1080;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    // Calculate scale to fit width or height, whichever is more constrained
+    const scaleX = windowWidth / designWidth;
+    const scaleY = windowHeight / designHeight;
+    const scale = Math.min(scaleX, scaleY);
+    
+    document.documentElement.style.setProperty('--scale-factor', scale);
+    document.querySelector('.scaler').style.transform = `scale(${scale})`;
+    
+    // Center the design
+    if (scaleX > scaleY) {
+      const offsetX = (windowWidth - (designWidth * scale)) / 2;
+      document.querySelector('.scaler').style.left = `${offsetX}px`;
+    } else {
+      document.querySelector('.scaler').style.left = '0px';
+    }
+  }
+
+  // Initialize stars
+  const totalStars = 1000;
+  const clusters = [
+    { x: 300, y: 200 },
+    { x: 1200, y: 400 },
+    { x: 800, y: 700 }
+  ];
+
+  for (let i = 0; i < totalStars; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+
+    // Varying star size
+    let size = Math.random() < 0.1 ? (4 + Math.random() * 1.5) : (1 + Math.random() * 2.5);
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    // Brightness variation
+    if (Math.random() < 0.2) {
+      star.classList.add("bright");
+    }
+    if (size >= 2) {
+      star.classList.add("big");
+    }
+
+    let x, y;
+
+    // ~30% stars near clusters
+    if (Math.random() < 0.2) {
+      const cluster = clusters[Math.floor(Math.random() * clusters.length)];
+      x = cluster.x + (Math.random() - 0.5) * 200;
+      y = cluster.y + (Math.random() - 0.5) * 200;
+    } else {
+      // Uniform background fill
+      x = Math.random() * 1920;
+      y = Math.random() * 1080;
+    }
+
+    // Clamp to screen bounds
+    x = Math.max(0, Math.min(1920 - size, x));
+    y = Math.max(0, Math.min(1080 - size, y));
+
+    star.style.left = x + "px";
+    star.style.top = y + "px";
+
+    document.querySelector('.scaler').appendChild(star);
+  }
+
+  // Set initial scale and update on resize
+  window.addEventListener('load', setScale);
+  window.addEventListener('resize', setScale);
+
+  function toggleBox(idToToggle) {
+  const allBoxes = document.querySelectorAll('.vertical-box');
+  const defaultBox = document.getElementById('defaultBox');
+  const clickedBox = document.getElementById(idToToggle);
+
+  // Use getComputedStyle to check actual visibility
+  const isVisible = window.getComputedStyle(clickedBox).display === 'block';
+
+  // Hide all boxes first
+  allBoxes.forEach(box => box.style.display = 'none');
+
+  if (isVisible) {
+    // If the clicked box was already visible, show defaultBox
+    defaultBox.style.display = 'block';
+  } else {
+    // Otherwise show the clicked box
+    clickedBox.style.display = 'block';
+  }
+}
+
+</script>
+<div class="center-box">
+  <!-- DNA 1 -->
+	<div style="
+	  position: absolute;
+	  top: 30px;
+	  right: 30px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+
+	<!-- DNA 2 -->
+	<div style="
+	  position: absolute;
+	  top: 30px;
+	  right: 90px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+
+	<!-- DNA 3 -->
+	<div style="
+	  position: absolute;
+	  top: 30px;
+	  right: 150px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+    <!-- DNA 4 -->
+	<div style="
+	  position: absolute;
+	  top: 30px;
+	  right: 210px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+	 <!-- DNA 5 -->
+	<div style="
+	  position: absolute;
+	  bottom: -10px;
+	  right: 280px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+	 <!-- DNA 6 -->
+	<div style="
+	  position: absolute;
+	  bottom: -10px;
+	  right: 340px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+	 <!-- DNA 7 -->
+	<div style="
+	  position: absolute;
+	  bottom: -10px;
+	  right: 400px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+	 <!-- DNA 8 -->
+	<div style="
+	  position: absolute;
+	  bottom: -10px;
+	  right: 460px;
+	  width: 50px;
+	  height: 150px;
+	  z-index: 0;
+	  opacity: 0.3;
+	  animation: floatDNA 6s ease-in-out infinite;
+	">
+	  <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4">
+		<path d="M30,0 C70,50 30,100 70,150 C30,200 70,250 30,300" />
+		<path d="M70,0 C30,50 70,100 30,150 C70,200 30,250 70,300" />
+		<line x1="30" y1="0" x2="70" y2="0"/>
+		<line x1="30" y1="100" x2="70" y2="100"/>
+		<line x1="30" y1="200" x2="70" y2="200"/>
+		<line x1="30" y1="300" x2="70" y2="300"/>
+	  </svg>
+	</div>
+  <!-- Positioned header at the top inside center-box -->
+  <div style="position: absolute; top: 40px; left: 45%; transform: translateX(-50%);">
+    <h3 style="color: white; font-size: 28px; white-space: nowrap; margin: 0; font-family: 'Ubuntu', sans-serif;">
+      Computational Biology | Bioinformatics | Machine Learning
+    </h3>
+  </div>
+
+	<div style="margin-top: -190px; margin-right: -290px; display: flex; justify-content: center; gap: 20px; align-items: center; font-family: 'Ubuntu', sans-serif;">
+	  <!-- ORCID -->
+	  <a href="https://orcid.org/your-orcid-id" title="ORCID" style="color: white;">
+		<img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID" width="28" height="28" />
+	  </a>
+
+	  <!-- Twitter -->
+	  <a href="https://twitter.com/bio_sharma" title="Twitter" style="color: white; font-size: 28px;">
+		<i class="fab fa-twitter"></i>
+	  </a>
+
+	  <!-- Instagram -->
+	  <a href="https://www.instagram.com/memoirs_shreya/" title="Instagram" style="color: white; font-size: 28px;">
+		<i class="fab fa-instagram"></i>
+	  </a>
+
+	  <!-- GitHub -->
+	  <a href="https://github.com/Shreya-droid" title="GitHub" style="color: white; font-size: 28px;">
+		<i class="fab fa-github"></i>
+	  </a>
+
+	  <!-- YouTube -->
+	  <a href="https://www.youtube.com/channel/UCqxZVKylVHbMeKlCpdR7ing" title="YouTube" style="color: white; font-size: 28px;">
+		<i class="fab fa-youtube"></i>
+	  </a>
+	</div>
+
+  	<div style="position: absolute; top: 240px; left: 61%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; color: #00BFFF; background: transparent;">
+	  <span style="font-size: 34px; font-weight: bold; white-space: nowrap;">
+		Shreya Sharma
+	  </span>
+	  <a href="pdf/SharmaShreya_Resume.pdf" style="color: #00BFFF;  align-items: center;">
+		<i class="material-icons" style="font-size: 24px;">attachment</i>
+	  </a>
+	</div>
+	<div id="defaultBox" class="vertical-box">
+		<p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">As a Ph.D. candidate specializing in computational biology and machine learning, my research centers around the fascinating realm of protein-DNA interactions. In essence, I aim to comprehend how these molecular partnerships function, leveraging knowledge from various science domains, bringing together insights from different disciplines. I am driven by a deep sense of motivation and unwavering determination to unravel the mysteries of our natural world. <br /><br />
+		<br />As I embark on this scholarly journey, I am eager to forge meaningful connections with like-minded individuals and organizations. I wholeheartedly embrace the opportunity to collaborate on diverse projects, where the fusion of intellect, passion, and creativity can propel us towards groundbreaking advancements in the fascinating realms of computational biology and bioinformatics. Together, let us venture into uncharted territories, unraveling the mysteries of life and enriching our understanding of the world we inhabit. <br /><br />
+		</p>
+	</div>
+	
+	<div id="educationBox" class="vertical-box" style="display: none; margin-top: 210px;">
+	  <p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">
+		◆ <i>2023-Present: PhD in Computational Biology</i>&nbsp;&nbsp;
+		<a href="https://www.iitr.ac.in/">
+		  <img src="image/university_logo4.png" alt="University Logo" style="width: 82px; height: 82px; vertical-align: middle;">
+		</a>
+	  </p>
+	  <p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">
+		◆ <i>2021-2023: MTech in Biosciences And Bioengineering</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.iitj.ac.in/">
+		  <img src="image/IIT_Jodhpur.png" alt="University Logo" style="width: 92px; height: 92px; vertical-align: middle;">
+		</a>
+	  </p>
+	  <p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">
+		◆ <i>2016-2018: M.Sc. in Bioinformatics</i>
+		<a href="https://www.bhu.ac.in/Site/Home/1_2_16_Main-Site">
+		  <img src="image/university_logo2.png" alt="University Logo" style="width: 200px; height: 86px; vertical-align: middle;">
+		</a>
+	  </p>
+	</div>
+	<div id="experienceBox" class="vertical-box" style="display: none; margin-top: 170px;">
+	<p style= "text-align: justify; font-family: 'Ubuntu', sans-serif;">
+	  ◆ January, 2023 - May, 2023 : <a>Teaching Assistant<a/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href= "https://www.iitj.ac.in/"><img src="image/IIT_Jodhpur.png" alt="University Logo" style="width: 82px; height: 82px; vertical-align: middle;">
+	  </a>
+	  <div><i>Indian Institute of Technology Jodhpur (IIT-J), Rajasthan, India.</i></div>
+	  </p>
+	  <p style= "text-align: justify; font-family: 'Ubuntu', sans-serif;">
+	  ◆ September, 2020 - August, 2021 : <a>Project Assistant<a/>&nbsp;&nbsp;&nbsp;
+	  <a href= "https://www.iisertvm.ac.in/"><img src="image/experience1.png" alt="University Logo" style="width: 82px; height: 62px; vertical-align: middle;">
+	  </a>
+	  <div><i>Indian Institute of Science Education and Research(IISER), Thiruvananthapuram, Kerala, India.</i></div>
+	  </p>
+	  <p style= "text-align: justify; font-family: 'Ubuntu', sans-serif;">
+	  ◆ September, 2018 - April, 2019 : <a>Research Trainee</a>&nbsp;&nbsp;&nbsp;
+	  <a href= "http://www.nii.res.in/"><img src="image/experience2.png" alt="University Logo" style="width: 62px; height: 62px; vertical-align: middle;">
+	  </a>
+	  <div><i>National Institute of Immunology(NII), New Delhi, India.</i></div>
+	  </p>
+	</div>
+	<div id="publicationBox" class="vertical-box" style="display: none; margin-top: 220px;">
+		<p style= "text-align: justify; font-family: 'Ubuntu', sans-serif;">
+		◆&nbsp;<u><b>Origin, evolution, and maintenance of gene-strand bias in bacteria.</b></u><br>
+		<br><i>Malhar Atre, Bharat Joshi, Jebin Babu, Shabduli Sawant, <u>Shreya Sharma</u>, T Sabari Sankar (2024). <b> Nucleic Acids Research. </b> DOI: <a href="https://doi.org/10.1093/nar/gkae155" target="_blank" style="color: #00BFFF;">10.1093/nar/gkae155</a></i>.
+		</p>
+	</div>
+	<div id="achievementBox" class="vertical-box" style="display: none; margin-top: 120px;">
+	  <p><i style="text-align: justify; font-size: 24px; color: #00BFFF;">Academic Achievements</i><br /><br />
+	  ◆ Institute Ph.D. fellowship 2023-present at <i>IIT Roorkee</i> funded by Ministry of Education (MoE), Government of India. <br />
+	  ◆ Institute MTech. fellowship 2021-2023 at <i>IIT Jodhpur</i> funded by Ministry of Education (MoE), Government of India. <br />
+	  ◆ Qualified GATE (Biotechnology) in 2021.<br />
+	  <i>The Graduate Aptitude Test Engineering (GATE) is an examination conducted in India that primarily tests the comprehensive understanding of various undergraduate subjects in engineering and science.</i><br /> 
+	  ◆ Qualified IIT-JAM (Life Sciences) in 2016.<br />
+	  <i>IIT JAM is a national-level entrance test conducted in India for admission in MSc.</i><br />
+	  ◆ Qualified JNVST examination in 2005.<br /><br />
+	  <i style="text-align: justify; font-size: 24px; color: #00BFFF;">Extracurricular Achievements</i><br /><br />
+	  ◆ Obtained NCC (National Cadet Corps) ‘B’ and ‘C’ certificate by Ministry of Defense, Govt of India.<br />
+	  ◆ Twice selected for National Basketball Championship affiliated to School Games Federation of India (SGFI), India.<br />
+	   </p>
+	</div>
+	<div id="museBox" class="vertical-box" style="display: none; margin-top: 120px;">
+	  <p style="text-align: justify; font-size: 24px;">
+	  ◆ <u>Quotes</u>: <a href="https://cbradio.medium.com/10-captain-kirk-quotes-that-will-change-the-way-you-think-about-humanity-b1ba81039ab0" style="color: #00BFFF;"><i>The greatest Star Trek quotes of all time</i><br></br>
+	  </a><br></br>
+	  
+	  ◆ <u>Books</u>: 
+	  &nbsp;&nbsp;</br></br>
+	  <div style="display: flex; justify-content: space-between;">
+	  <img src="image/tipping.png" alt="Book 1" style="flex: 1; margin-right: 10px; width: 22%; height: 28%; object-fit: cover;">
+	  <img src="image/HH.png" alt="Book 2" style="flex: 1; margin-right: 10px; width: 22%; height: 28%; object-fit: cover;">
+	  <img src="image/life.png" alt="Book 3" style="flex: 1; margin-right: 10px; width: 22%; height: 28%; object-fit: cover;">
+	  <img src="image/kiteRunner.png" alt="Book 4" style="flex: 1; width: 28%; height: 22%; object-fit: cover;">
+	  </div></p>
+	</div>	
+</div>
+</div>
+</body>
+</html>
